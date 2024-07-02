@@ -1,0 +1,214 @@
+Print od number in anoynmous function
+let oddnumber = function(arr)
+{
+for (let i=0;i<=arr.length;i++)
+{
+if(arr[i]%2==1)
+{
+console.log(arr[i])
+}
+}
+}
+oddnumber([1,2,3,4,5,6])
+
+Print od number in IIFE function
+(function(arr)
+{
+for (let i=0;i<=arr.length;i++)
+{
+if(arr[i]%2==1)
+{
+console.log(arr[i])
+}
+}
+})([1,2,3,4,5,6])
+
+sum of all number in an array using anoynmous function
+ 
+let addnumberarray = function(arr)
+{
+var addnumber = 0
+for (let i=0;i<arr.length;i++)
+{
+
+addnumber=addnumber+arr[i]
+
+}
+console.log(addnumber)
+
+}
+addnumberarray([6,21,36,45])
+
+sum of all number in an array using IIFE
+
+(function(arr)
+{
+var addnumber = 0
+for (let i=0;i<arr.length;i++)
+{
+
+addnumber=addnumber+arr[i]
+
+}
+console.log(addnumber)
+
+}
+)([6,21,36,45])
+
+Reurn all the palindromes in an array
+
+let palindrome = function(arr){
+    let pushed = []
+    for (i=0;i<arr.length;i++)
+    {
+        let reverse = arr[i].split("").reverse("").join("")
+        if(reverse===arr[i])
+        {
+            pushed.push(reverse)
+        }
+    }
+    console.log(pushed)
+}
+palindrome(["kayak","refer","rotor","praveen","eager","level"])
+
+Reurn all the palindromes in an array using IIFE Function
+(function(arr){
+    let pushed = []
+    for (i=0;i<arr.length;i++)
+    {
+        let reverse = arr[i].split("").reverse("").join("")
+        if(reverse===arr[i])
+        {
+            pushed.push(reverse)
+        }
+    }
+    console.log(pushed)
+})(["kayak","refer","rotor","praveen","eager","level"])
+
+
+Remove Duplicate from an arry using anoynmous function
+
+let tamil  =function(arr)
+{
+  let x=[]
+    for(let i=0;i<arr.length;i++)
+    {
+        
+        if (x.indexOf(arr[i])===-1)
+        {
+        x.push(arr[i])
+        }
+        
+        }
+        return x;
+
+}
+console.log(tamil([1,2,3,4,5,2,4,3,5]))
+
+Remove Duplicate from an arry using IIFE function
+(function(arr)
+{
+  let x=[]
+    for(let i=0;i<arr.length;i++)
+    {
+        
+        if (x.indexOf(arr[i])===-1)
+        {
+        x.push(arr[i])
+        }
+        
+        }
+        console.log(x) 
+
+})([1,2,3,4,5,6,4,5,6,3,1])
+
+Return all the prime numbers in an array using anoynmous function
+
+let primenumber = function(arr)
+{
+let finalvalue=[]
+for(i=0;i<arr.length;i++)
+{
+   if(checkprime(arr[i])) 
+   {
+   finalvalue.push((arr[i])) 
+   }
+   }
+console.log(finalvalue)
+}
+function checkprime(num)
+{
+    if(num<=1)return false
+    if(num===2)return true
+    if(num%2===0)return false
+    for(let i=3;i<=Math.sqrt(num);i+= 2)
+    {
+       if (num%i===0)return false
+       
+    }
+    return true
+}
+
+primenumber([2,3,5,7,11,13])
+
+Return all the prime numbers in an array using IIFE function
+
+(function(arr)
+{
+let finalvalue=[]
+for(i=0;i<arr.length;i++)
+{
+   if(checkprime(arr[i])) 
+   {
+   finalvalue.push((arr[i])) 
+   }
+   }
+console.log(finalvalue)
+})([2,3,5,7,11,13])
+
+function checkprime(num)
+{
+    if(num<=1)return false
+    if(num===2)return true
+    if(num%2===0)return false
+    for(let i=3;i<=Math.sqrt(num);i+= 2)
+    {
+       if (num%i===0)return false
+       
+    }
+    return true
+
+}
+
+Convert all the strings to title caps in a string array in anoynmous function
+
+let  caps =function(arr)
+{
+output = []
+for(let i=0;i<arr.length;i++)
+{
+    let y=arr[i].split("")
+    y[0]=y[0].toUpperCase()
+    z=y.join("")
+    output.push(z)
+}
+console.log(output)
+}
+let input = ["tamil","english","malayalam","telegu"]
+caps(input)
+
+Convert all the strings to title caps in a string array in IIFE Function
+(function(arr)
+{
+output = []
+for(let i=0;i<arr.length;i++)
+{
+    let y=arr[i].split("")
+    y[0]=y[0].toUpperCase()
+    z=y.join("")
+    output.push(z)
+}
+console.log(output)
+}
+)(["tamil","english","malayalam","telegu"])
+
